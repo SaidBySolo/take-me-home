@@ -5,7 +5,7 @@
     font-weight: 400;
 }
 
-.Container {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +17,7 @@
     }
 }
 
-.RealTimeClock {
+.real-time-clock {
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
