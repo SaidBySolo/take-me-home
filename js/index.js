@@ -1,10 +1,10 @@
-const clock = document.getElementsByClassName("RealTimeClock");
+const clock = document.querySelector(".real-time-clock");
 
-const DDay = new Date("2024-09-13");
+const dday = new Date("2024-09-13");
 
 const calculate = () => {
     const now = new Date()
-    const gap = DDay.getTime() - now.getTime()
+    const gap = dday.getTime() - now.getTime()
 
     const day = Math.floor(gap / (1000 * 60 * 60 * 24))
     const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
