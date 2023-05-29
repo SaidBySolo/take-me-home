@@ -1,4 +1,4 @@
-const clock = document.querySelector(".real-time-clock");
+const clock = document.getElementsByClassName("real-time-clock")[0];
 
 const dday = new Date("2024-09-13");
 
