@@ -1,10 +1,10 @@
-const clock = document.getElementsByClassName("RealTimeClock");
+const clock = document.getElementsByClassName("real-time-clock")[0];
 
-const DDay = new Date("2024-09-13");
+const dday = new Date("2024-09-13");
 
 const calculate = () => {
     const now = new Date()
-    const gap = DDay.getTime() - now.getTime()
+    const gap = dday.getTime() - now.getTime()
 
     const day = Math.floor(gap / (1000 * 60 * 60 * 24))
     const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
@@ -17,7 +17,7 @@ const calculate = () => {
 const render = () => {
     const [day, hours, minutes, seconds] = calculate();
 
-    clock[0].innerHTML = `그가 집에 가기까지 ${day}일 ${hours}시간 ${minutes}분 ${seconds}초 남았습니다.`;
+    clock.innerHTML = `그가 집에 가기까지 ${day}일 ${hours}시간 ${minutes}분 ${seconds}초 남았습니다.`;
 }
 
 setInterval(render, 1000);
