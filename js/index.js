@@ -1,8 +1,6 @@
 const clock = document.getElementsByClassName("real-time-clock")[0];
 
-const dday = new Date("2024-09-13");
-
-const calculate = () => {
+const calculate = (dday) => {
     const now = new Date()
     const gap = dday.getTime() - now.getTime()
 
@@ -15,7 +13,7 @@ const calculate = () => {
 }
 
 const render = () => {
-    const [day, hours, minutes, seconds] = calculate();
+    const [day, hours, minutes, seconds] = calculate(new Date("2024-09-13"));
 
     clock.innerHTML = `그가 집에 가기까지 ${day}일 ${hours}시간 ${minutes}분 ${seconds}초 남았습니다.`;
 }
